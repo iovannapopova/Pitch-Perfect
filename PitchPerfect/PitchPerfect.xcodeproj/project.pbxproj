@@ -19,7 +19,6 @@
 		1CAE24E81BB6E5F4003F21E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAE24E61BB6E5F4003F21E8 /* LaunchScreen.storyboard */; };
 		1CAE24F31BB6E5F4003F21E8 /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE24F21BB6E5F4003F21E8 /* PitchPerfectTests.swift */; };
 		1CAE24FE1BB6E5F4003F21E8 /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE24FD1BB6E5F4003F21E8 /* PitchPerfectUITests.swift */; };
-		1CAE250C1BB6EA2A003F21E8 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE250B1BB6EA2A003F21E8 /* RecordedAudio.swift */; settings = {ASSET_TAGS = (); }; };
 		1CAE250E1BB6F9C0003F21E8 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE250D1BB6F9C0003F21E8 /* PlaySoundsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		1CAE24F91BB6E5F4003F21E8 /* PitchPerfectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPerfectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CAE24FD1BB6E5F4003F21E8 /* PitchPerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectUITests.swift; sourceTree = "<group>"; };
 		1CAE24FF1BB6E5F4003F21E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CAE250B1BB6EA2A003F21E8 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 		1CAE250D1BB6F9C0003F21E8 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +117,6 @@
 				1CAE250D1BB6F9C0003F21E8 /* PlaySoundsViewController.swift */,
 				1C00DFF21BB86E7E0097DC48 /* CollectionViewDataSource.swift */,
 				1C00DFF41BB8767F0097DC48 /* AudioEffectCollectionViewCell.swift */,
-				1CAE250B1BB6EA2A003F21E8 /* RecordedAudio.swift */,
 				1CAE24E11BB6E5F4003F21E8 /* Main.storyboard */,
 				1CAE24E41BB6E5F4003F21E8 /* Assets.xcassets */,
 				1CAE24E61BB6E5F4003F21E8 /* LaunchScreen.storyboard */,
@@ -276,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CAE250C1BB6EA2A003F21E8 /* RecordedAudio.swift in Sources */,
 				1C00DFF31BB86E7E0097DC48 /* CollectionViewDataSource.swift in Sources */,
 				1C385B741BB8B4A20010487B /* AudioPlayer.swift in Sources */,
 				1C00DFF51BB8767F0097DC48 /* AudioEffectCollectionViewCell.swift in Sources */,

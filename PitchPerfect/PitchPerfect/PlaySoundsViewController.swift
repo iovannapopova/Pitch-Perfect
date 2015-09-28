@@ -17,15 +17,15 @@ class PlaySoundsViewController : UIViewController, UICollectionViewDelegate, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellowColor()
+        view.backgroundColor = .whiteColor()
         dataSource = CollectionViewDataSource()
-        dataSource.array = ["chipmunk2x-iphone","echo","fast2x-iphone","darthvader2x-iphone"]
+        dataSource.array = ["slow2x-iphone","fast2x-iphone","chipmunk2x-iphone","darthvader2x-iphone"]
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 100, height: 100)
         
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 320), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: CGRect(x: 30, y: 30, width: view.bounds.size.width - 60, height: 320), collectionViewLayout: layout)
         collectionView.backgroundColor = .whiteColor()
         collectionView.dataSource = dataSource
         collectionView.delegate = self
@@ -41,10 +41,10 @@ class PlaySoundsViewController : UIViewController, UICollectionViewDelegate, UIC
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         player.stop()
         switch indexPath.item {
-            case 0 : player.playWithEffect(.High)
-            case 1 : player.playWithEffect(.Low)
-            case 2 : player.playWithEffect(.Fast)
-            case 3 : player.playWithEffect(.Slow)
+            case 0 : player.playWithEffect(.Slow)
+            case 1 : player.playWithEffect(.Fast)
+            case 2 : player.playWithEffect(.High)
+            case 3 : player.playWithEffect(.Low)
             default : break
         }
     }
