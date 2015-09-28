@@ -21,21 +21,22 @@ class PlaySoundsViewController : UIViewController, UICollectionViewDelegate, UIC
         dataSource = CollectionViewDataSource()
         dataSource.array = ["slow2x-iphone","fast2x-iphone","chipmunk2x-iphone","darthvader2x-iphone"]
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 100, height: 100)
+        let layoutSectionInset : CGFloat = 10.0
+        let itemSize : CGFloat = 100.0
+        let edgeCollectionView: CGFloat = 30.0
+        let heightCollectionView : CGFloat = 320.0
         
-        collectionView = UICollectionView(frame: CGRect(x: 30, y: 30, width: view.bounds.size.width - 60, height: 320), collectionViewLayout: layout)
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: layoutSectionInset, left: layoutSectionInset, bottom: layoutSectionInset, right: layoutSectionInset)
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+        
+        collectionView = UICollectionView(frame: CGRect(x: edgeCollectionView, y: edgeCollectionView, width: view.bounds.size.width - 2 * edgeCollectionView, height: heightCollectionView), collectionViewLayout: layout)
         collectionView.backgroundColor = .whiteColor()
         collectionView.dataSource = dataSource
         collectionView.delegate = self
         collectionView.registerClass(AudioEffectCollectionViewCell.self, forCellWithReuseIdentifier: "AudioEffectCellID")
         
         view.addSubview(collectionView)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
