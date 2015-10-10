@@ -22,6 +22,7 @@ class AudioPlayer {
     let player = AVAudioPlayerNode()
     var buffer : AVAudioPCMBuffer!
     let effectAudioUnit = AVAudioUnitTimePitch()
+    var currentEffect : AudioEffect!
     
     init(fileURL : NSURL) {
         do {
@@ -39,6 +40,7 @@ class AudioPlayer {
     }
     
     func playWithEffect(effect : AudioEffect) {
+        currentEffect = effect
         switch effect {
         case .Fast :
             effectAudioUnit.pitch = 1.0
@@ -62,6 +64,10 @@ class AudioPlayer {
             
         }
         player.play()
+    }
+    
+    func play() {
+        playWithEffect(currentEffect)
     }
     
     func stop() {
