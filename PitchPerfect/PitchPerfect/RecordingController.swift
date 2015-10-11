@@ -23,6 +23,11 @@ enum RecordingState{
     case Paused
 }
 
+enum RecordButtonTitle : String {
+    case Recording = "Recording"
+    case Record = "Record!"
+}
+
 class RecordingController : RecordingStateObserver {
     weak var UI : RecordingUI?
     var state : RecordingState = .Idle {
@@ -43,19 +48,19 @@ class RecordingController : RecordingStateObserver {
         switch state {
         case .Idle :
             state = .Active
-            UI?.viewModel = RecordSoundsViewController.ViewModel(buttonTitle: "Recording!", stopButtonHidden: false)
+            UI?.viewModel = RecordSoundsViewController.ViewModel(buttonTitle: RecordButtonTitle.Recording, stopButtonHidden: false)
         case .Active :
             state = .Paused
-            UI?.viewModel = RecordSoundsViewController.ViewModel(buttonTitle: "Record!", stopButtonHidden: false)
+            UI?.viewModel = RecordSoundsViewController.ViewModel(buttonTitle: RecordButtonTitle.Record, stopButtonHidden: false)
         case .Paused :
             state = .Active
-            UI?.viewModel = RecordSoundsViewController.ViewModel(buttonTitle: "Recording!", stopButtonHidden: false)
+            UI?.viewModel = RecordSoundsViewController.ViewModel(buttonTitle: RecordButtonTitle.Recording, stopButtonHidden: false)
         }
     }
     
     func recordingStoped() {
         precondition(state != .Idle)
-        UI?.viewModel = RecordSoundsViewController.ViewModel(buttonTitle: "Record!", stopButtonHidden: true)
+        UI?.viewModel = RecordSoundsViewController.ViewModel(buttonTitle: RecordButtonTitle.Record, stopButtonHidden: true)
         state = .Idle
     }
     

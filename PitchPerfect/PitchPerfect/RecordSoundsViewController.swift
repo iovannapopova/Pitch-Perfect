@@ -11,7 +11,7 @@ import UIKit
 class RecordSoundsViewController: UIViewController, RecordingUI {
     
     struct ViewModel {
-        let buttonTitle : String
+        let buttonTitle : RecordButtonTitle
         let stopButtonHidden : Bool
     }
     
@@ -24,7 +24,7 @@ class RecordSoundsViewController: UIViewController, RecordingUI {
     
     let observer : RecordingStateObserver
     
-    var viewModel : ViewModel = ViewModel(buttonTitle: "Record!", stopButtonHidden: true) {
+    var viewModel : ViewModel = ViewModel(buttonTitle: RecordButtonTitle.Record, stopButtonHidden: true) {
         didSet {
             updateView()
         }
@@ -67,7 +67,7 @@ class RecordSoundsViewController: UIViewController, RecordingUI {
     }
     
     func updateView() {
-        recordButton.setTitle(viewModel.buttonTitle, forState: .Normal)
+        recordButton.setTitle(viewModel.buttonTitle.rawValue, forState: .Normal)
         stopButton.hidden = viewModel.stopButtonHidden
     }
     

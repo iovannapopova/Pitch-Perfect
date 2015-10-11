@@ -21,6 +21,15 @@
 		1CAE24F31BB6E5F4003F21E8 /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE24F21BB6E5F4003F21E8 /* PitchPerfectTests.swift */; };
 		1CAE24FE1BB6E5F4003F21E8 /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE24FD1BB6E5F4003F21E8 /* PitchPerfectUITests.swift */; };
 		1CAE250E1BB6F9C0003F21E8 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE250D1BB6F9C0003F21E8 /* PlaySoundsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA11281BCA8BED006CCB3B /* RecordingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFA11271BCA8BED006CCB3B /* RecordingControllerTests.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA11291BCA9264006CCB3B /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C00DFF61BB899320097DC48 /* RecordingController.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA112A1BCA95F8006CCB3B /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE24DF1BB6E5F4003F21E8 /* RecordSoundsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA112B1BCA961B006CCB3B /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE250D1BB6F9C0003F21E8 /* PlaySoundsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA112C1BCA9620006CCB3B /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C00DFF81BB8A74A0097DC48 /* AudioRecorder.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA112D1BCA9626006CCB3B /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C385B731BB8B4A20010487B /* AudioPlayer.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA112E1BCA962A006CCB3B /* PlayingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8EFF01BC952CC00C7B226 /* PlayingController.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA112F1BCA9630006CCB3B /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C00DFF21BB86E7E0097DC48 /* CollectionViewDataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		1CFA11301BCA9633006CCB3B /* AudioEffectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C00DFF41BB8767F0097DC48 /* AudioEffectCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +70,7 @@
 		1CAE24FD1BB6E5F4003F21E8 /* PitchPerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectUITests.swift; sourceTree = "<group>"; };
 		1CAE24FF1BB6E5F4003F21E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CAE250D1BB6F9C0003F21E8 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		1CFA11271BCA8BED006CCB3B /* RecordingControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingControllerTests.swift; path = PitchPerfectTests/RecordingControllerTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +141,7 @@
 		1CAE24F11BB6E5F4003F21E8 /* PitchPerfectTests */ = {
 			isa = PBXGroup;
 			children = (
+				1CFA11271BCA8BED006CCB3B /* RecordingControllerTests.swift */,
 				1CAE24F21BB6E5F4003F21E8 /* PitchPerfectTests.swift */,
 				1CAE24F41BB6E5F4003F21E8 /* Info.plist */,
 			);
@@ -292,7 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CFA11301BCA9633006CCB3B /* AudioEffectCollectionViewCell.swift in Sources */,
+				1CFA112C1BCA9620006CCB3B /* AudioRecorder.swift in Sources */,
 				1CAE24F31BB6E5F4003F21E8 /* PitchPerfectTests.swift in Sources */,
+				1CFA112E1BCA962A006CCB3B /* PlayingController.swift in Sources */,
+				1CFA11281BCA8BED006CCB3B /* RecordingControllerTests.swift in Sources */,
+				1CFA112F1BCA9630006CCB3B /* CollectionViewDataSource.swift in Sources */,
+				1CFA112A1BCA95F8006CCB3B /* RecordSoundsViewController.swift in Sources */,
+				1CFA112B1BCA961B006CCB3B /* PlaySoundsViewController.swift in Sources */,
+				1CFA11291BCA9264006CCB3B /* RecordingController.swift in Sources */,
+				1CFA112D1BCA9626006CCB3B /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

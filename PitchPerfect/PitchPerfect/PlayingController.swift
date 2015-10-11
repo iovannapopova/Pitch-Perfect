@@ -20,7 +20,7 @@ protocol PlayingStateObserver{
 class PlayingController : PlayingStateObserver{
     weak var UI : PlayingUI?
     let player : AudioPlayer
-        
+    
     init(audioPlayer : AudioPlayer) {
         player = audioPlayer
     }
